@@ -8,27 +8,106 @@
 }
 
 .main-header__inner {
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
   min-height: rem(80);
   margin: 0;
   padding: rem(30, 30);
+
+  @media (min-width: breakpoint(tablet)) {
+    padding: rem(30, 50);
+    min-height: rem(149);
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  @media (min-width: breakpoint(desktop)) {
+    padding: 0;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
 }
 
-.main-header__call {
+.main-header__navigation {
+  position: absolute;
+}
+
+.main-header__call-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: rem(20, 17);
+  background-color: transparent;
   margin: 0;
-  padding: 0;
+
+  @include font-par(font-family(default), font-weight(normal), font-size(base-m), normal, color($base-c, white), font-lh(root));
+
+  @include fluid-type(font-size(base-m), font-size(base-d));
+
+  @media (min-width: breakpoint(tablet)) {
+    padding: rem(25, 17);
+  }
+
+  @media (min-width: breakpoint(desktop)) {
+    padding: rem(30, 17);
+  }
+
+  &:focus,
+  &:hover {
+    color: color($main-c, primary);
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 }
 
-.main-logo:focus,
-.main-logo:hover {
-  .main-header__call-svg {
-    @include opacity(0.6);
+.main-header__call-link:focus,
+.main-header__call-link:hover {
+  .main-navigation__svg {
+    color: color($main-c, primary);
+    fill: color($main-c, primary);
   }
 }
 
 
 .main-header__call-svg {
-  color: color($main-c, primary);
-  fill: color($main-c, primary);
+  display: block;
+  margin: 0 15px 0 0 ;
+  padding: 0;
+
+  color: color($base-c, white);
+  fill: color($base-c, white);
+
+  &:focus,
+  &:hover {
+    color: color($main-c, primary);
+    fill: color($main-c, primary);
+  }
+}
+
+.main-header__logo {
+  position: absolute;
+  top: 67px;
+  left: 50%;
+  z-index: z-index(logo);
+  display: block;
+  transform: translate(-50%, -50%);
+
+  @media (min-width: breakpoint(tablet)) and (max-width: breakpoint(tablet-top)) {
+    flex-shrink: 0;
+    position: static;
+    top: 0;
+    left: 0;
+    padding: 0;
+    transform: translate(0, 0);
+  }
+
+  @media (min-width: breakpoint(desktop)) {
+    top: 115px;
+  }
 }

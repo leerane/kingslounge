@@ -7,6 +7,8 @@ import {PathName} from './utils';
 
 /**
  * Функция копирования файлов
+ *
+ * @return {function()}
  */
 const copy = () => {
   return gulp.src([

@@ -1,0 +1,50 @@
+.gallery {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: color($main-c, background);
+  background-image: url("../img/svg/note-pattern.svg");
+  background-repeat: repeat;
+  background-size: 100px;
+}
+
+.gallery__inner {
+  padding: rem(35, 30);
+  margin: 0 auto;
+
+  @media (min-width: breakpoint(tablet)) {
+    padding: rem(50, 50);
+  }
+
+  @media (min-width: breakpoint(desktop)) {
+    padding: rem(70, 50);
+    max-width: 1150px;
+  }
+}
+
+.gallery__title {
+  margin: 0 0 0.5em 0;
+  padding: 0;
+
+  white-space: pre-line;
+
+  @include font-par(font-family(default), font-weight(bold), font-size(h2-m), normal, color($main-c, primary), font-lh(root));
+
+  @include fluid-type(font-size(h2-m), font-size(h2-d));
+}
+
+
+.gallery__list {
+  @include clear-list();
+  background-color: red;
+  display: flex;
+  margin: 0 -15px;
+}
+
+.gallery__item {
+  margin: 0;
+  padding: 0 15px;
+  width: 150px;
+  height: 150px;
+  background-color: green;
+}

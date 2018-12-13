@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Кальянная King's Lounge">
-    <meta name="keywords" content="кальянная, кальян, hookah, king, lounge">
+    <!-- <meta name="description" content="Кальянная King's Lounge">
+    <meta name="keywords" content="кальянная, кальян, hookah, king, lounge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кальянная King's Lounge</title>
+    <title>Тест</title>
 
     <!--- Preloading fonts and other stuff -->
     <link rel="preload" href="fonts/montserratregular.woff2" as="font" type="font/woff2" crossorigin>
@@ -32,54 +32,231 @@
       <div class="main-header__inner">
 
         <!-- Главный логотип сайта -->
-        <a class="main-logo main-page__main-logo" aria-label="Логотип King's Lounge">
+        <a class="main-logo main-header__logo main-page__main-logo" aria-label="Логотип King's Lounge">
           <picture>
-            <source media="(min-width: 768px)" srcset="img/svg/logo--gradient.svg">
+            <source media="(min-width: 1150px)" srcset="img/svg/logo--main.svg">
+            <source media="(min-width: 768px)" srcset="img/svg/logo--tablet.svg">
             <img src="img/svg/logo--mobile.svg" alt="Логотип King's Lounge" class="main-logo__svg">
           </picture>
-        </a>
-        <a href="tel:+79035502500" class="main-header__call">
-          <svg aria-label="Footer logo" width="30.56" height="30.49" class="main-header__call-svg">
-            <use xlink:href="img/svg/sprite.svg#call-icon"/>
-          </svg>
-          <span class="visually-hidden">+7 (903) 550-25-00</span>
         </a>
         <button class="hamburger-button js-hamburger-button" type="button" aria-label="Hamburger button">
           <span class="hamburger-button__icon"></span>
         </button>
+
         <!-- Главная навигация сайта -->
-       <!-- <nav class="main-navigation">
+        <nav class="main-navigation main-header__navigation js-dropdown-navigation visually-hidden">
           <div class="main-navigation__inner">
             <ul class="main-navigation__list">
               <li class="main-navigation__item">
-                <a href="#" class="link main-navigation__link">Главная</a>
+                <a href="" class="main-navigation__link main-navigation__link--icon">
+                  <svg aria-label="Home" width="21" height="21" class="main-navigation__svg main-header__svg--home">
+                    <use xlink:href="img/svg/sprite.svg#home-icon"/>
+                  </svg>Главная</a>
               </li>
               <li class="main-navigation__item">
-                <a href="#" class="link main-navigation__link">Меню</a>
+                <a href="#menu" class="main-navigation__link main-navigation__link--icon">
+                  <svg aria-label="Menu" width="21" height="21" class="main-navigation__svg main-header__svg--home">
+                    <use xlink:href="img/svg/sprite.svg#menu-icon"/>
+                  </svg>Меню</a>
               </li>
               <li class="main-navigation__item">
-                <a href="#" class="link main-navigation__link">Контакты</a>
+                <a href="#contact" class="main-navigation__link main-navigation__link--icon">
+                  <svg aria-label="Contact" width="21" height="21" class="main-navigation__svg main-header__svg--home">
+                    <use xlink:href="img/svg/sprite.svg#contact-icon"/>
+                  </svg>Контакты</a>
               </li>
               <li class="main-navigation__item">
-                <a href="#" class="link main-navigation__link">Галерея</a>
+                <a href="#gallery" class="main-navigation__link main-navigation__link--icon">
+                  <svg aria-label="Gallery" width="21" height="21" class="main-navigation__svg main-header__svg--home">
+                    <use xlink:href="img/svg/sprite.svg#gallery-icon"/>
+                  </svg>Галерея</a>
               </li>
             </ul>
-            <a href="tel:+7(903)550-25-00" class="main-navigation__phone">+7 (903) 550-25-00</a>
+            <a href="tel:+79035502500" class="main-navigation__call-link">
+              <svg aria-label="Phone" width="21" height="21" class="main-navigation__svg">
+                <use xlink:href="img/svg/sprite.svg#call-icon"/>
+              </svg>+7 (903) 550-25-00</a>
           </div>
-        </nav> -->
+        </nav>
       </div>
     </header>
 
     <!-- Контент сайта -->
     <main class="main-content">
-      <h1 class="visually-hidden">Main page</h1>
+
+      <!-- Промо -->
       <section class="promo-things">
         <div class="promo-things__inner">
-          <h2 class="main-title promo-things__title">Кальянная
-            King's Lounge!</h2>
-          <a href="#contact" class="promo-things__address"></a>
+          <h2 class="promo-things__subtitle">Кальянная</h2>
+          <h1 class="promo-things__title">King's Lounge</h1>
           <div class="promo-things__order-buttons">
-            <a href="" class="promo-things__button"></a>
+            <a href="#contact" onclick="" class="button button--primary button--icon button--s--wide promo-things__button">Новоясеневский пр.
+              <svg aria-label="Phone" width="21" height="21" class="button__svg">
+                <use xlink:href="img/svg/sprite.svg#placeholder-icon"/>
+              </svg>
+            </a>
+            <a href="" class="button button--primary button--s--wide promo-things__button">Забронировать</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Меню -->
+      <section class="menu" id="menu">
+        <div class="menu__inner">
+          <h2 class="menu__title">Меню</h2>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <article class="menu-card">
+                <div class="menu-card__inner">
+                  <h3 class="menu-card__title">Японская кухня</h3>
+                  <a href="" class="button menu-card__button">Открыть</a>
+                </div>
+              </article>
+            </li>
+            <li class="menu__item">
+              <article class="menu-card">
+                <div class="menu-card__inner">
+                  <h3 class="menu-card__title">Японская кухня</h3>
+                  <a href="" class="button menu-card__button">Открыть</a>
+                </div>
+              </article>
+            </li>
+          </ul>
+          <a href="#menu" class="contact__address"></a>
+          <div class="contact__order-buttons">
+            <a href="" class="contact__button"></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Галерея -->
+      <section class="gallery" id="gallery">
+        <div class="gallery__inner">
+          <h2 class="gallery__title">Галерея</h2>
+          <ul class="gallery__list">
+            <li class="gallery__item"></li>
+            <li class="gallery__item"></li>
+            <li class="gallery__item"></li>
+            <li class="gallery__item"></li>
+            <li class="gallery__item"></li>
+            <li class="gallery__item"></li>
+          </ul>
+          <!-- Root element of PhotoSwipe. Must have class pswp. -->
+          <button id="btn">Open PhotoSwipe</button>
+
+          <!-- Root element of PhotoSwipe. Must have class pswp. -->
+          <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+            <!-- Background of PhotoSwipe.
+                 It's a separate element, as animating opacity is faster than rgba(). -->
+            <div class="pswp__bg"></div>
+
+            <!-- Slides wrapper with overflow:hidden. -->
+            <div class="pswp__scroll-wrap">
+
+              <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+              <div class="pswp__container">
+                <!-- don't modify these 3 pswp__item elements, data is added later on -->
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+              </div>
+
+              <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+              <div class="pswp__ui pswp__ui--hidden">
+
+                <div class="pswp__top-bar">
+
+                  <!--  Controls are self-explanatory. Order can be changed. -->
+
+                  <div class="pswp__counter"></div>
+
+                  <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button class="pswp__button pswp__button--zoom" title="Zoom in/out">
+                    <svg aria-label="Zoom in" tabindex="-1" width="21.51" height="21.265" class="pswp__icon-svg pswp__icon-svg--zoom-in">
+                      <use xlink:href="img/svg/sprite.svg#pswp-zoom-in-icon"/>
+                    </svg>
+                    <svg aria-label="Zoom in" tabindex="-1" width="21.51" height="21.265" class="pswp__icon-svg pswp__icon-svg--zoom-out">
+                      <use xlink:href="img/svg/sprite.svg#pswp-zoom-out-icon"/>
+                    </svg>
+                  </button>
+
+                  <button class="pswp__button pswp__button--fs" title="Toggle fullscreen">
+                    <svg aria-label="Expand" tabindex="-1" width="21.605" height="20.75" class="pswp__icon-svg pswp__icon-svg--expand">
+                      <use xlink:href="img/svg/sprite.svg#pswp-expand-icon"/>
+                    </svg>
+                    <svg aria-label="Minimize" tabindex="-1" width="21.605" height="20.75" class="pswp__icon-svg pswp__icon-svg--minimize">
+                      <use xlink:href="img/svg/sprite.svg#pswp-minimize-icon"/>
+                    </svg>
+                  </button>
+
+                  <button class="pswp__button pswp__button--close" title="Close (Esc)">
+                    <svg aria-label="Close" tabindex="-1" width="21.55" height="21.545" class="pswp__icon-svg">
+                      <use xlink:href="img/svg/sprite.svg#pswp-close-icon"/>
+                    </svg>
+                  </button>
+
+                </div>
+
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                  <div class="pswp__share-tooltip"></div>
+                </div>
+
+                <div class="pswp__buttons">
+                  <button class="pswp__button pswp__button--arrow--left" title="Previous">
+                    <svg aria-label="Previous" width="60" height="60" class="pswp__icon-svg pswp__icon-svg--arrow">
+                      <use xlink:href="img/svg/sprite.svg#pswp-arrow-left-icon"/>
+                    </svg>
+                  </button>
+
+                  <button class="pswp__button pswp__button--arrow--right" title="Next">
+                    <svg aria-label="Next" width="60" height="60" class="pswp__icon-svg pswp__icon-svg--arrow">
+                      <use xlink:href="img/svg/sprite.svg#pswp-arrow-right-icon"/>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="pswp__caption">
+                  <div class="pswp__caption__center"></div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+          <a href="#contact" class="gallery__address"></a>
+          <div class="gallery__order-buttons">
+            <a href="" class="gallery__button"></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Бронирование -->
+      <section class="booking" id="booking">
+        <div class="booking__inner">
+          <h2 class="booking__title">Бронирование</h2>
+          <a href="#contact" class="contact__address"></a>
+          <div class="contact__order-buttons">
+            <a href="" class="contact__button"></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Контакты -->
+      <section class="contact" id="contact">
+        <div class="contact__inner">
+          <h2 class="contact__title">Где нас найти?</h2>
+          <a href="#contact" class="contact__address"></a>
+          <div class="contact__order-buttons">
+            <a href="" class="contact__button"></a>
           </div>
         </div>
       </section>
@@ -88,7 +265,7 @@
     <!-- Подвал сайта -->
     <footer class="main-footer">
       <div class="main-footer__inner">
-       <a href="" class="main-footer__logo main-page__footer-logo">
+        <a href="" class="main-footer__logo main-page__footer-logo">
           <svg aria-label="Footer logo" width="101.61" height="34.06" class="main-footer__logo-svg">
             <use xlink:href="img/svg/sprite.svg#logo--full"/>
           </svg>
@@ -124,7 +301,7 @@
     <script>svg4everybody();</script>
 
     <!-- Main script -->
-    <script src="js/main.min.js" async></script>
+    <script src="js/bundle.js"></script>
 
     <!-- Google Maps API -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBv3Mue0MjRxWehq81r_XyQS8Lnr-iQ-VQ&callback"></script>

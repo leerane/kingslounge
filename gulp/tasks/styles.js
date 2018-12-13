@@ -18,6 +18,8 @@ const reload = bs.reload;
 
 /**
  * Функция компиляции препроцессорных файлов
+ *
+ * @return {function()}
  */
 const styles = () => {
   return gulp.src(PathName.SOURCE + PathName.SCSS + '/' + FileName.SCSS)
@@ -33,7 +35,7 @@ const styles = () => {
     }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(PathName.BUILD + PathName.CSS))
-    .pipe(reload({ stream: true }));
+    .pipe(reload({stream: true}));
 };
 
 export {styles as default};

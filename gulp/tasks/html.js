@@ -12,12 +12,14 @@ const reload = bs.reload;
 
 /**
  * Функция копирования HTML файлов
+ *
+ * @return {function()}
  */
 const html = () => {
   return gulp.src(PathName.SOURCE + PathName.HTML_PATTERN)
     .pipe(plumber())
     .pipe(gulp.dest(PathName.BUILD))
-    .pipe(reload({ stream: true }));
+    .pipe(reload({stream: true}));
 };
 
 export {html as default};

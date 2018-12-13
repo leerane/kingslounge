@@ -1,23 +1,6 @@
 .main-logo {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  z-index: z-index(logo);
-  display: block;
-  transform: translate(-50%, -50%);
-
-  @media (min-width: breakpoint(tablet)) and (max-width: breakpoint(tablet-top)) {
-    position: static;
-    top: 0;
-    left: 0;
-    padding-top: 0;
-    padding-right: 2px;
-    transform: translate(0, 0);
-  }
-
-  @media (min-width: breakpoint(desktop)) {
-    @include centerer(null, null, both);
-  }
+  margin: 0;
+  padding: 0;
 
   &::after {
     @include pseudo-ie11-fix();
@@ -45,6 +28,11 @@
   fill: color($main-c, primary);
 
   @media (min-width: breakpoint(tablet)) {
+    width: 248.63px;
+    height: 120px;
+  }
+
+  @media (min-width: breakpoint(desktop)) {
     width: 148.03px;
     height: 198.34px;
   }

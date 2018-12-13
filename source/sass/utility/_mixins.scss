@@ -12,6 +12,7 @@
   @media (max-width: $lower-range) {
     font-size: $min-font-size;
   }
+
   @media (min-width: $upper-range) {
     font-size: $max-font-size;
   }
@@ -190,7 +191,6 @@
 // UI
 
 @mixin placeholder() {
-
   @each $prefix in $prefix-list {
     &#{$prefix} {
       @content;

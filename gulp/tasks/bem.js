@@ -8,6 +8,8 @@ import {PathName} from './utils';
 
 /**
  * Функция создания папок и .scss файлов на основе BEM
+ *
+ * @return {function()}
  */
 const bemToCss = () => {
   return gulp.src(PathName.SOURCE + PathName.HTML_PATTERN)

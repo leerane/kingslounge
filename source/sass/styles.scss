@@ -1,12 +1,27 @@
+// Normalize
 @import "./utility/normalize";
+
+// Main config
 @import "./utility/config";
+
+// Other
+@import "../blocks/pswp/_pswp.scss";
+@import "../blocks/pswp/default-skin/_default-skin.scss";
+@import "../blocks/button/_button.scss";
+@import "../blocks/booking/_booking.scss";
+@import "../blocks/contact/_contact.scss";
+@import "../blocks/gallery/_gallery.scss";
 @import "../blocks/hamburger-button/_hamburger-button.scss";
 @import "../blocks/main-header/_main-header.scss";
 @import "../blocks/main-logo/_main-logo.scss";
+@import "../blocks/main-navigation/_main-navigation.scss";
 @import "../blocks/main-footer/_main-footer.scss";
 @import "../blocks/main-page/_main-page.scss";
-@import "../blocks/main-title/_main-title.scss";
+@import "../blocks/menu/_menu.scss";
 @import "../blocks/promo-things/_promo-things.scss";
 @import "../blocks/social-link/_social-link.scss";
 @import "../blocks/social-list/_social-list.scss";
 @import "../blocks/visually-hidden/_visually-hidden.scss";
+
+// Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap-grid";
