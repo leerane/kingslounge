@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Кальянная King's Lounge">
+    <meta name="keywords" content="кальянная, кальян, hookah, king, lounge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кальянная King's Lounge</title>
+
+    <!--- Preloading fonts and other stuff -->
+    <link rel="preload" href="fonts/mullerregular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/mullermedium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/mullerbold.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.min.css">
+
+    <!-- Yandex.Maps API -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=8bccf721-324d-4188-ad44-35dddcdbf6a3" type="text/javascript"></script>
+
+    <!-- Picturefill -->
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/libs/picturefill/picturefill.min.js" async></script>
+  </head>
+
+  <!-- Главная часть страницы -->
+  <body class="main-page">
+
+  <!-- Шапка сайта -->
+  <header class="main-header js-main-header">
+    <div class="main-header__inner">
+
+      <!-- Главный логотип сайта -->
+      <a class="main-logo main-header__logo" aria-label="Логотип King's Lounge">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/svg/logo--main.svg">
+          <source media="(min-width: 768px)" srcset="img/svg/logo--tablet.svg">
+          <img src="img/svg/logo--mobile.svg" alt="Логотип King's Lounge" class="main-logo__svg">
+        </picture>
+      </a>
+
+      <!-- Бургер -->
+      <button class="hamburger-button js-hamburger-button" type="button" aria-label="Hamburger button">
+        <span class="hamburger-button__icon"></span>
+      </button>
+
+      <!-- Главная навигация сайта -->
+      <nav class="main-navigation main-header__navigation js-dropdown-navigation visually-hidden">
+        <div class="main-navigation__inner">
+          <ul class="main-navigation__list">
+            <li class="main-navigation__item">
+              <a href="/" class="main-navigation__link main-navigation__link--icon">
+                <svg aria-label="Home" width="21" height="21" class="main-navigation__svg main-header__svg--home">
+                  <use xlink:href="img/svg/sprite.svg#home-icon"/>
+                </svg>Главная</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="/#advantages" class="main-navigation__link main-navigation__link--icon">
+                <svg aria-label="Menu" width="21" height="21" class="main-navigation__svg main-header__svg--home">
+                  <use xlink:href="img/svg/sprite.svg#advantages-icon"/>
+                </svg>Преимущества</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="/#menu" class="main-navigation__link main-navigation__link--icon">
+                <svg aria-label="Menu" width="21" height="21" class="main-navigation__svg main-header__svg--home">
+                  <use xlink:href="img/svg/sprite.svg#menu-icon"/>
+                </svg>Меню</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="/#gallery" class="main-navigation__link main-navigation__link--icon">
+                <svg aria-label="Gallery" width="21" height="21" class="main-navigation__svg main-header__svg--home">
+                  <use xlink:href="img/svg/sprite.svg#gallery-icon"/>
+                </svg>Галерея</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="/#contact" class="main-navigation__link main-navigation__link--icon">
+                <svg aria-label="Contact" width="21" height="21" class="main-navigation__svg main-header__svg--home">
+                  <use xlink:href="img/svg/sprite.svg#contact-icon"/>
+                </svg>Контакты</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="tel:+79585553355" class="main-navigation__link main-navigation__link--icon">
+                <svg aria-label="Phone" width="21" height="21" class="main-navigation__svg">
+                  <use xlink:href="img/svg/sprite.svg#call-icon"/>
+                </svg>+7 (958) 555-33-55</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+    <!-- Контент сайта -->
+    <main class="main-content">
+
+      <!-- Шапка страницы -->
+      <header class="main-content__header">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a class="breadcrumbs__link" href="/" itemprop="url">Главная</a>
+          </li>
+          <li class="breadcrumbs__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a class="breadcrumbs__link breadcrumbs__link--disabled" href="" itemprop="url">404</a>
+          </li>
+        </ul>
+        <h1 class="visually-hidden">Страница 404</h1>
+      </header>
+
+      <!-- 404-->
+      <section class="error" id="error" aria-labelledby="errorTitle" aria-describedby="errorMessage">
+        <div class="gallery__inner">
+          <h2 class="error__title" id="errorTitle">404</h2>
+          <p class="error__message">Ошибка! Страница не найдена</p>
+          <a href="/" class="button button--primary button--s--wide error__button">Вернуться назад</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="main-footer">
+      <div class="main-footer__inner">
+        <a href="/" class="main-footer__logo" aria-label="Логотип King's Lounge">
+          <img src="img/svg/logo--tablet.svg" width="120" height="70" alt="Логотип King's Lounge" class="main-footer__logo-svg">
+        </a>
+        <ul class="social-list">
+          <li class="social-list__item">
+            <a href="#" class="social-link" aria-label="Instagram"><span class="visually-hidden">Instagram</span>
+              <svg aria-label="Instagram" width="36" height="36" class="social-link__svg">
+                <use xlink:href="img/svg/sprite.svg#instagram-icon"/>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="#" class="social-link" aria-label="VK"><span class="visually-hidden">VK</span>
+              <svg aria-label="VK" width="36" height="36" class="social-link__svg">
+                <use xlink:href="img/svg/sprite.svg#vk-icon"/>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="#" class="social-link" aria-label="Twitter"><span class="visually-hidden">Twitter</span>
+              <svg aria-label="Facebook" width="36" height="36" class="social-link__svg">
+                <use xlink:href="img/svg/sprite.svg#facebook-icon"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Скролл наверх -->
+    <a href="#" class="js-scroll-top main-page__js-scroll-top" aria-label="Scroll top">
+      <svg aria-label="Top" width="20" height="20" class="js-scroll-top__svg">
+        <use xlink:href="img/svg/sprite.svg#up-icon"/>
+      </svg>
+    </a>
+
+    <!-- SVG for Everybody -->
+    <script src="js/libs/svg4everybody/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+
+    <!-- Main script -->
+    <script src="js/page.bundle.js"></script>
+
+  </body>
+</html>
