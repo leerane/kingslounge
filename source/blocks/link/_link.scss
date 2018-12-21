@@ -1,6 +1,11 @@
 .link {
   display: block;
-  @include link();
+  margin: 0;
+  padding: 0;
+
+  @include font-par(font-family(default), font-weight(normal), font-size(base-m), normal, color($base-c, white), font-lh(root));
+
+  @include fluid-type(font-size(base-m), font-size(base-d));
 }
 
 .link--icon {

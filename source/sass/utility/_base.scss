@@ -3,14 +3,6 @@
 html {
   box-sizing: border-box;
   font-size: font-size(root);
-
-  @media (min-width: breakpoint(tablet)) {
-    font-size: 20px;
-  }
-
-  @media (min-width: breakpoint(desktop)) {
-    font-size: 30px;
-  }
 }
 
 *,
@@ -32,10 +24,9 @@ a {
   text-decoration: none;
 }
 
-@include font-face(Montserrat, "../fonts/", montserratregular, normal, 400, swap, null, null, (woff2: woff2, woff: woff));
+@include font-face(Muller, "../fonts/", mullerregular, normal, 400, swap, null, null, (woff2: woff2, woff: woff));
 
-@include font-face(Montserrat, "../fonts/", montserratmedium, normal, 500, swap, null, null, (woff2: woff2, woff: woff));
+@include font-face(Muller, "../fonts/", mullermedium, normal, 500, swap, null, null, (woff2: woff2, woff: woff));
 
-@include font-face(Montserrat, "../fonts/", montserratbold, normal, 700, swap, null, null, (woff2: woff2, woff: woff));
+@include font-face(Muller, "../fonts/", mullerbold, normal, 700, swap, null, null, (woff2: woff2, woff: woff));
 
-@include font-face(Montserrat, "../fonts/", montserratblack, normal, 900, swap, null, null, (woff2: woff2, woff: woff));

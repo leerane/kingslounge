@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Кальянная King's Lounge">
+    <meta name="keywords" content="кальянная, кальян, hookah, king, lounge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кальянная King's Lounge</title>
+
+    <!--- Preloading fonts and other stuff -->
+    <link rel="preload" href="fonts/mullerregular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/mullermedium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/mullerbold.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.min.css">
+
+    <!-- Yandex.Maps API -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=8bccf721-324d-4188-ad44-35dddcdbf6a3" type="text/javascript"></script>
+
+    <!-- Picturefill -->
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/libs/picturefill/picturefill.min.js" async></script>
+  </head>
+
+  <!-- Главная часть страницы -->
+  <body class="main-page main-page--full">
+
+    <!-- Контент сайта -->
+    <main class="main-content">
+
+      <!-- Шапка страницы -->
+      <header class="main-content__header">
+        <h1 class="visually-hidden">Страница технического обслуживания</h1>
+      </header>
+
+      <!-- Maintenance mod -->
+      <section class="maintenance" id="maintenance" aria-labelledby="maintenanceTitle" aria-describedby="maintenanceMessage">
+        <div class="maintenance__inner">
+          <!-- Главный логотип сайта -->
+          <a href="/" class="main-logo maintenance__main-logo" aria-label="Логотип King's Lounge">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/svg/logo--main.svg">
+              <source media="(min-width: 768px)" srcset="img/svg/logo--tablet.svg">
+              <img src="img/svg/logo--mobile.svg" alt="Логотип King's Lounge" class="main-logo__svg">
+            </picture>
+          </a>
+          <h2 class="maintenance__title" id="maintenanceTitle">Технические работы</h2>
+          <p class="maintenance__message">В данный момент сайт находится на техническом обслуживании. В скором времени все должно заработать!</p>
+          <ul class="social-list">
+            <li class="social-list__item">
+              <a href="#" class="social-link" aria-label="Instagram"><span class="visually-hidden">Instagram</span>
+                <svg aria-label="Instagram" width="36" height="36" class="social-link__svg">
+                  <use xlink:href="img/svg/sprite.svg#instagram-icon"/>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="#" class="social-link" aria-label="VK"><span class="visually-hidden">VK</span>
+                <svg aria-label="VK" width="36" height="36" class="social-link__svg">
+                  <use xlink:href="img/svg/sprite.svg#vk-icon"/>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="#" class="social-link" aria-label="Twitter"><span class="visually-hidden">Twitter</span>
+                <svg aria-label="Facebook" width="36" height="36" class="social-link__svg">
+                  <use xlink:href="img/svg/sprite.svg#facebook-icon"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- SVG for Everybody -->
+    <script src="js/libs/svg4everybody/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+
+  </body>
+</html>

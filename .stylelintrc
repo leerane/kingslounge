@@ -11,7 +11,7 @@
       "always", {
         "except": ["first-nested"],
         "ignore": ["after-comment", "blockless-after-blockless"],
-        "ignoreAtRules": ["if", "else"]
+        "ignoreAtRules": ["if", "else", "function"]
       }
     ],
     "scss/at-rule-no-unknown": true,

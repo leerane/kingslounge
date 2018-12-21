@@ -11,15 +11,17 @@ import {PathName} from './utils';
 
 /**
  * Функция сортировки "внутренностей" препроцессорных файлов
+ *
+ * @return {function()}
  */
 const sortSASS = () => {
   return gulp.src(PathName.SOURCE + PathName.SCSS_PATTERN, {
     base: process.cwd()
   })
     .pipe(
-      postcss([
-        sorting(config)
-      ], {syntax: parser})
+        postcss([
+          sorting(config)
+        ], {syntax: parser})
     )
     .pipe(gulp.dest('./'));
 };

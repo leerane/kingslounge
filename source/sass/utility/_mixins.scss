@@ -12,6 +12,7 @@
   @media (max-width: $lower-range) {
     font-size: $min-font-size;
   }
+
   @media (min-width: $upper-range) {
     font-size: $max-font-size;
   }
@@ -191,16 +192,17 @@
 
 @mixin placeholder() {
 
-  @each $prefix in $prefix-list {
-    &#{$prefix} {
-      @content;
-    }
-  }
   $prefix-list:
     "::-webkit-input-placeholder",
     ":-moz-placeholder",
     "::-moz-placeholder",
     ":-ms-input-placeholder";
+
+  @each $prefix in $prefix-list {
+    &#{$prefix} {
+      @content;
+    }
+  }
 }
 
 @mixin card($background-color: color($base-c, white)) {

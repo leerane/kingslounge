@@ -1,174 +1,104 @@
 .button {
+  position: relative;
   display: block;
   width: 100%;
   margin: 0;
-  padding: 15px 10px 17px 10px;
+  padding: rem(15, 10);
+  max-width: 270px;
   text-align: center;
   text-transform: uppercase;
-  background-color: transparent;
+  background-color: color($base-c, black);
   border: 0;
   cursor: pointer;
-  @include box-shadow(0, 0, 0, 2px, color($main-c, secondary), true);
+  transition: all 0.3s ease-in-out;
+  box-shadow:
+    inset 0 0 0 3px color($base-c, white),
+    inset 0 0 0 0 color($base-c, white),
+    inset 0 0 0 0 color($base-c, white);
 
-  @include font-par(font-family(opensans), font-weight(bold), font-size(other), normal, color($main-c, secondary), font-lh(base));
 
-  @media (min-width: breakpoint(tablet)) {
-    font-size: font-size(base-t);
-  }
+  @include font-par(font-family(default), font-weight(bold), font-size(base-m), normal, color($main-c, primary), font-lh(root));
 
-  &:focus,
-  &:hover {
-    color: color($base-c, white);
-    background-color: color($main-c, secondary);
-  }
+  @include fluid-type(font-size(base-m), font-size(base-d));
 
   &:active {
-    color: rgba(color($base-c, white), 0.3);
+    transform: translateY(5px);
+    opacity: 0.7;
   }
 }
 
-.button__inner {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.button:focus,
+.button:hover {
+  color: color($base-c, black);
+  box-shadow:
+    inset 0 0 0 0 color($base-c, white),
+    inset 0 100px 0 0 color($base-c, white),
+    inset 0 -100px 0 0 color($base-c, white);
+}
+
+.button--s--wide {
+  max-width: 320px;
+}
+
+.button--s-full {
   width: 100%;
-  min-height: 103px;
-  margin: 0;
-  padding: 25px 0 15px 29px;
-
-  @media (min-width: breakpoint(tablet)) {
-    min-height: 119px;
-    padding: 28px 0 15px 36px;
-  }
-
-  @media (min-width: breakpoint(desktop)) {
-    padding: 28px 0 15px 37px;
-  }
 }
 
 .button--primary {
   position: relative;
-  font-size: font-size(base-t);
-  color: color($base-c, white);
+  color: color($base-c, black);
   background-color: color($main-c, primary);
   box-shadow: none;
 
   &:focus,
   &:hover {
-    background-color: #59d5bc;
+    color: color($main-c, primary);
+    background-color: color($base-c, black);
+    border: none;
+    box-shadow:
+      inset 0 0 0 3px color($main-c, primary),
+      0 10px 70px 0 rgba(color($main-c, primary), 0.15);
   }
 
   &:active {
-    background-color: #59d5bc;
+    opacity: 0.7;
+  }
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    @include pseudo-ie11-fix();
   }
 }
 
-.button--primary::after {
-  @include pseudo-ie11-fix();
-}
-
-.button--interior:focus,
-.button--interior:hover {
+.button--icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  background-color: #59d5bc;
-
-  .button__inner--interior {
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    background-color: #59d5bc;
-  }
-
-  .button__svg--interior {
-    color: rgba(#149080, 0.7);
-    fill: rgba(#149080, 0.7);
-  }
 }
 
-.button--interior:active {
-  color: rgba(#ffffff, 0.3);
-  background-color: #59d5bc;
+.button--icon:focus,
+.button--icon:hover {
 
-  .button__svg--interior {
-    color: rgba(#149080, 0.3);
-    fill: rgba(#149080, 0.3);
+  .button__svg {
+    transform: translateX(5px);
+    color: color($main-c, primary);
+    fill: color($main-c, primary);
   }
-}
-
-.button--toy {
-  background-color: #56c3b2;
-}
-
-.button--toy:focus,
-.button--toy:hover {
-  position: relative;
-  background-color: color($main-c, accent);
-
-  .button__inner--toy {
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    background-color: color($main-c, accent);
-  }
-
-  .button__svg--toy {
-    color: rgba(#149080, 0.7);
-    fill: rgba(#149080, 0.7);
-  }
-}
-
-.button--toy:active {
-  color: rgba(#ffffff, 0.3);
-  background-color: color($main-c, accent);
-
-  .button__svg--toy {
-    color: rgba(#149080, 0.3);
-    fill: rgba(#149080, 0.3);
-  }
-}
-
-.button__text {
-  white-space: pre-line;
 }
 
 .button__svg {
-  margin: 0;
+  display: block;
+  margin: 0 0 0 15px;
   padding: 0;
+  transition: all 0.3s ease-in-out;
+
+  color: color($base-c, black);
+  fill: color($base-c, black);
 }
 
-.button__svg--interior {
-  margin-top: -2px;
-  margin-right: 36px;
-  color: rgba(#149080, 0.5);
-  fill: rgba(#149080, 0.5);
 
-  @media (min-width: breakpoint(tablet)) {
-    margin-top: 2px;
-  }
-
-  @media (min-width: breakpoint(desktop)) {
-    margin-right: 36px;
-  }
-}
-
-.button__svg--toy {
-  margin-top: -4px;
-  margin-right: 27px;
-  color: rgba(#149080, 0.5);
-  fill: rgba(#149080, 0.5);
-
-  @media (min-width: breakpoint(tablet)) {
-    margin-top: 3px;
-    margin-right: 33px;
-  }
-
-  @media (min-width: breakpoint(desktop)) {
-    margin-right: 35px;
-  }
-}
-
-.button--text--s {
-  padding-top: 17px;
-  padding-bottom: 15px;
-  font-size: font-size(base-t);
-}

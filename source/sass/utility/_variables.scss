@@ -2,24 +2,30 @@
 
 // Z-index
 
-$z-index-logo: 5 !default;
-$z-index-dropdown: 10 !default;
-$z-index-navbar-background: 15 !default;
-$z-index-navbar: 20 !default;
+$z-index-default: 1 !default;
+$z-index-dropdown: 5 !default;
+$z-index-header: 10 !default;
+$z-index-logo: 15 !default;
+$z-index-navbar-background: 20 !default;
+$z-index-navbar: 25 !default;
 $z-index-hamburger: 30 !default;
 $z-index-tooltip: 50 !default;
 $z-index-modal-background: 60 !default;
 $z-index-modal: 70 !default;
+$z-index-gallery: 1500 !default;
 
 $z-index: (
-  logo: $z-index-logo,
+  default: $z-index-default,
   dropdown: $z-index-dropdown,
+  header: $z-index-header,
+  logo: $z-index-logo,
   navbar-background: $z-index-navbar-background,
   navbar: $z-index-navbar,
   hamburger: $z-index-hamburger,
   tooltip: $z-index-tooltip,
   modal-background: $z-index-modal-background,
-  modal: $z-index-modal
+  modal: $z-index-modal,
+  gallery: $z-index-gallery
 );
 
 // Breakpoints
@@ -76,7 +82,9 @@ $base-c: (
 
 $primary-color: #ffda00 !default;
 $secondary-color: map-get($base-c, white) !default;
-$background-color: #0f0f0f !default;
+$header-color: #020202;
+$background-color: #060606 !default;
+$pattern-color: #0f0f0f !default;
 $accent-color: #fff000 !default;
 $success-color: #39b54a !default;
 $warning-color: #f9c301 !default;
@@ -86,7 +94,9 @@ $info-color: #0074e6 !default;
 $main-c: (
   primary: $primary-color,
   secondary: $secondary-color,
+  header: $header-color,
   background: $background-color,
+  pattern: $pattern-color,
   accent: $accent-color,
   success: $success-color,
   warning: $warning-color,
@@ -147,17 +157,19 @@ $font-weights: (
 
 $font-size--xxxx-large: 79px !default;
 $font-size--xxx-large: 56px !default;
-$font-size--xx-large: 40px !default;
+$font-size--xx-large: 38px !default;
 $font-size--x-large: 28px !default;
 $font-size--large: 20px !default;
 $font-size--regular: 19px !default;
 $font-size--small: 18px !default;
 $font-size--smaller: 17px !default;
 $font-size--smallest: 16px !default;
+$font-size--sub: 14px !default;
 $font-size--root: 15px !default;
 
 $font-sizes: (
   root: $font-size--root,
+  sub: $font-size--sub,
   base-m: $font-size--smallest,
   base-t: $font-size--smaller,
   base-d: $font-size--small,
@@ -185,5 +197,6 @@ $font-line-height: (
 );
 
 $font-stack: (
-  montserrat: ("Montserrat", arial, sans-serif)
+  default: ("Muller", arial, sans-serif),
+  roboto: ("Roboto", arial, sans-serif)
 );

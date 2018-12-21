@@ -1,0 +1,84 @@
+.maintenance {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.maintenance__inner {
+  padding: rem(20, 30);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: color($main-c, background);
+
+  @include font-par(font-family(default), font-weight(normal), font-size(base-m), normal, color($base-c, white), font-lh(root));
+
+  @include fluid-type(font-size(base-m), font-size(base-d));
+
+  @media (min-width: breakpoint(tablet)) {
+    padding: rem(30, 50);
+  }
+
+  @media (min-width: breakpoint(desktop)) {
+    padding: rem(40, 50);
+  }
+}
+
+.maintenance__title {
+  margin: 0 auto 0.7em auto;
+  padding: 0;
+  text-align: center;
+
+  white-space: pre-line;
+
+  @include font-par(font-family(default), font-weight(bold), font-size(h1-m), normal, color($main-c, primary), font-lh(root));
+
+  @include fluid-type(font-size(h1-m), font-size(h1-d));
+
+  @media (min-width: breakpoint(desktop)) {
+    margin-bottom: rem(50);
+  }
+}
+
+.maintenance__message {
+  margin: 0 0 rem(30) 0;
+  padding: 0;
+
+  white-space: pre-line;
+
+  @include font-par(font-family(default), font-weight(normal), font-size(base-m), normal, color($base-c, white), font-lh(root));
+
+  @include fluid-type(font-size(base-m), font-size(base-d));
+
+  @media (min-width: breakpoint(tablet)) {
+    margin: 0 0 rem(45) 0;
+  }
+
+  @media (min-width: breakpoint(desktop)) {
+    margin: 0 0 rem(45) 0;
+  }
+}
+
+.maintenance__button {
+  max-width: 100%;
+  width: 100%;
+
+  @media (min-width: breakpoint(tablet)) {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+.maintenance__main-logo {
+  position: relative;
+  margin: 0 auto rem(10) auto;
+}

@@ -1,39 +1,29 @@
 .main-logo {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  z-index: z-index(logo);
-  display: block;
-  transform: translate(-50%, -50%);
-
-  @media (min-width: breakpoint(tablet)) and (max-width: breakpoint(tablet-top)) {
-    position: static;
-    top: 0;
-    left: 0;
-    padding-top: 0;
-    padding-right: 2px;
-    transform: translate(0, 0);
-  }
-
-  @media (min-width: breakpoint(desktop)) {
-    @include centerer(null, null, both);
-  }
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 
   &::after {
     @include pseudo-ie11-fix();
   }
 }
 
+.main-logo--sticky {
+  @media (min-width: breakpoint(desktop)) {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+
 .main-logo:focus,
 .main-logo:hover {
   .main-logo__svg {
-    @include opacity(0.6);
+    @include opacity(0.7);
   }
 }
 
 .main-logo:active {
   .main-logo__svg {
-    @include opacity(0.3);
+    @include opacity(0.5);
   }
 }
 
@@ -43,8 +33,14 @@
   height: 110px;
   color: color($main-c, primary);
   fill: color($main-c, primary);
+  transition: all 0.3s ease-in-out;
 
   @media (min-width: breakpoint(tablet)) {
+    width: 248.63px;
+    height: 120px;
+  }
+
+  @media (min-width: breakpoint(desktop)) {
     width: 148.03px;
     height: 198.34px;
   }

@@ -14,6 +14,8 @@ import {PathName} from './utils';
 
 /**
  * Функция сжатия изображений
+ *
+ * @return {function()}
  */
 const compress = () => {
   return gulp.src(PathName.SOURCE + PathName.IMG + PathName.IMG_PATTERN)
@@ -42,6 +44,8 @@ const compress = () => {
 
 /**
  * Функция создания SVG спрайта
+ *
+ * @return {function()}
  */
 const sprite = () => {
   return gulp.src(PathName.SOURCE + PathName.IMG + PathName.SVG + '/to-sprite' + PathName.SVG_PATTERN)
@@ -56,7 +60,8 @@ const sprite = () => {
     .pipe(cheerio({
       run: ($) => {
         const excludedElements = [
-
+          '#pswp-arrow-left-icon',
+          '#pswp-arrow-right-icon'
         ];
         const ElementsData = {
           G: excludedElements.map((el) => el + ' g'),

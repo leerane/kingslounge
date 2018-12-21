@@ -12,12 +12,14 @@ const reload = bs.reload;
 
 /**
  * Функция компиляции PUG файлов
+ *
+ * @return {function()}
  */
 const pug = () => {
   return gulp.src(PathName.SOURCE + PathName.PUG_PATTERN, {since: gulp.lastRun('pug')})
     .pipe(gulpPug({pretty: true}))
     .pipe(gulp.dest(PathName.BUILD))
-    .pipe(reload({ stream: true }));
+    .pipe(reload({stream: true}));
 };
 
 export {pug as default};

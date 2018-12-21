@@ -1,0 +1,11 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 20.32">
+  <title>menu-icon</title>
+  <g>
+    <path d="M27.15,24.8H9.1a1.35,1.35,0,0,1,0-2.69H27.15a1.35,1.35,0,0,1,0,2.69Z" transform="translate(-1.5 -4.84)"/>
+    <path d="M27.15,16.35H9.1a1.35,1.35,0,0,1,0-2.69H27.15a1.35,1.35,0,0,1,0,2.69Z" transform="translate(-1.5 -4.84)"/>
+    <path d="M27.15,7.89H9.1a1.35,1.35,0,0,1,0-2.69H27.15a1.35,1.35,0,0,1,0,2.69Z" transform="translate(-1.5 -4.84)"/>
+    <circle cx="1.81" cy="1.81" r="1.81"/>
+    <circle cx="1.81" cy="10.16" r="1.81"/>
+    <circle cx="1.81" cy="18.51" r="1.81"/>
+  </g>
+</svg>

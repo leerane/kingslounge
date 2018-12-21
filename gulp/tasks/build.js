@@ -4,7 +4,7 @@ import copy from './copy';
 import {compress, sprite} from './graphics';
 import html from './html';
 import styles from './styles';
-import {js, libs} from './javascript';
+import {js, libs} from './scripts';
 import {PathName} from './utils';
 
 
@@ -14,6 +14,8 @@ import {PathName} from './utils';
 
 /**
  * Функция очистки папки build
+ *
+ * @return {function()}
  */
 const cleanup = () => {
   return clean(PathName.BUILD);
@@ -21,6 +23,8 @@ const cleanup = () => {
 
 /**
  * Функция сборки проекта
+ *
+ * @return {function()}
  */
 const build = gulp.series(copy, compress, sprite, html, styles, libs, js);
 

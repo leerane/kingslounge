@@ -1,0 +1,72 @@
+.error {
+  padding: 0;
+  margin: 0;
+}
+
+.error__inner {
+  padding: rem(20, 30);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: color($main-c, background);
+  box-shadow: inset 0 0 0 2px color($main-c, primary);
+
+  @include font-par(font-family(default), font-weight(normal), font-size(base-m), normal, color($base-c, white), font-lh(root));
+
+  @include fluid-type(font-size(base-m), font-size(base-d));
+
+  @media (min-width: breakpoint(tablet)) {
+    padding: rem(30, 50);
+  }
+
+  @media (min-width: breakpoint(desktop)) {
+    padding: rem(40, 50);
+  }
+}
+
+.error__title {
+  margin: 0 auto 0.7em auto;
+  padding: 0;
+  text-align: center;
+
+  white-space: pre-line;
+
+  @include font-par(font-family(default), font-weight(bold), font-size(h1-m), normal, color($main-c, primary), font-lh(root));
+
+  @include fluid-type(font-size(h1-m), font-size(h1-d));
+
+  @media (min-width: breakpoint(desktop)) {
+    margin-bottom: rem(50);
+  }
+}
+
+.error__message {
+  margin: 0 0 rem(30) 0;
+  padding: 0;
+  text-align: center;
+
+  white-space: pre-line;
+
+  @include font-par(font-family(default), font-weight(normal), font-size(base-m), normal, color($base-c, white), font-lh(root));
+
+  @include fluid-type(font-size(base-m), font-size(base-d));
+
+  @media (min-width: breakpoint(tablet)) {
+    margin: 0 0 rem(45) 0;
+  }
+
+  @media (min-width: breakpoint(desktop)) {
+    margin: 0 0 rem(45) 0;
+  }
+}
+
+.error__button {
+  max-width: 100%;
+  width: 100%;
+
+  @media (min-width: breakpoint(tablet)) {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}

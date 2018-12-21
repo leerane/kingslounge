@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
 
+  background-color: color($main-c, header);
+}
+
+.main-page--full {
   background-color: color($main-c, background);
 }
 
@@ -11,4 +15,21 @@
 
 .main-page__main-logo {
   pointer-events: none;
+}
+
+.main-page__link {
+  pointer-events: none;
+}
+
+.main-page__js-scroll-top {
+  position: fixed;
+  right: 15px;
+  bottom: -100px;
+  width: 50px;
+  height: 50px;
+}
+
+.main-page__js-scroll-top--active {
+  right: 15px;
+  bottom: 15px;
 }

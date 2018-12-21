@@ -1,0 +1,47 @@
+.modal {
+  padding: 0;
+  margin: 0;
+}
+
+.modal__inner {
+  padding: rem(20, 30);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: color($main-c, background);
+  box-shadow: inset 0 0 0 2px color($main-c, primary);
+
+  @include font-par(font-family(default), font-weight(normal), font-size(base-m), normal, color($base-c, white), font-lh(root));
+
+  @include fluid-type(font-size(base-m), font-size(base-d));
+
+  @media (min-width: breakpoint(tablet)) {
+    padding: rem(30, 50);
+  }
+
+  @media (min-width: breakpoint(desktop)) {
+    padding: rem(40, 50);
+  }
+}
+
+.modal__title {
+  display: block;
+  margin: 0 0 0.5em 0;
+  padding: 0;
+
+  white-space: pre-line;
+
+  @include font-par(font-family(default), font-weight(bold), font-size(h2-m), normal, color($base-c, white), 1.5);
+
+  @include fluid-type(font-size(h3-m), font-size(h3-d));
+}
+
+.modal__message {
+  padding: 0;
+  margin: 0 0 1em 0;
+}
+
+.modal__button {
+  margin: 0;
+}

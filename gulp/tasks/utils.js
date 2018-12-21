@@ -13,6 +13,11 @@
  * @property {string} CONFIG
  * @property {string} SPRITE
  * @property {string} LAST_ATTR
+ * @property {string} ENTRY
+ * @property {string} PAGE
+ * @property {string} GALLERY
+ * @property {string} WORDPRESS
+ * @property {string} BUNDLE
  */
 const FileName = {
   JS: 'main.js',
@@ -21,7 +26,12 @@ const FileName = {
   LIBS: 'libs.js',
   CONFIG: '_config.scss',
   SPRITE: '_sprite.scss',
-  LAST_ATTR: '_last-attr.scss'
+  LAST_ATTR: '_last-attr.scss',
+  ENTRY: 'main.js',
+  PAGE: 'page.js',
+  GALLERY: 'gallery.js',
+  WORDPRESS: 'wordpress.js',
+  BUNDLE: 'bundle.js'
 };
 
 /**
@@ -54,6 +64,7 @@ const FileName = {
  * @property {string} FONTS_PATTERN
  * @property {string} _LAST_ATTR_FILE
  * @property {string} _CONFIG_FILE
+ * @property {string} GULP
  */
 const PathName = {
   SOURCE: './source',
@@ -82,6 +93,7 @@ const PathName = {
   FONTS_PATTERN: '/**/*.{woff,woff2}',
   _LAST_ATTR_FILE: '/' + FileName.LAST_ATTR,
   _CONFIG_FILE: '/' + FileName.CONFIG,
+  GULP: './gulp'
 };
 
 export {FileName, PathName};

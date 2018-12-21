@@ -3,9 +3,10 @@
 // Units
 
 @function strip-unit($number) {
-  @if (type-of($number) == 'number' and not unitless($number)) {
+  @if (type-of($number) == "number" and not unitless($number)) {
     @return $number / ($number * 0 + 1);
   }
+
   @return $number;
 }
 
@@ -45,12 +46,14 @@
 
 @function rem($values...) {
   $list: null;
+
   @each $item in $values {
     @if (type-of $item == number) {
-      $result: round($item / strip-unit(font-size(root)));
+      $result: ($item / strip-unit(font-size(root)));
       $list: append($list, #{$result}rem);
     }
   }
+
   @return $list;
 }
 

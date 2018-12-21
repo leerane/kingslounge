@@ -11,19 +11,19 @@
 .social-link:focus,
 .social-link:hover {
   .social-link__svg {
-    color: color($main-c, accent);
-    fill: color($main-c, accent);
+    color: color($main-c, primary);
+    fill: color($main-c, primary);
   }
 }
 
 .social-link:active {
   .social-link__svg {
-    color: rgba(color($main-c, accent), 0.3);
-    fill: rgba(color($main-c, accent), 0.3);
+    color: rgba(color($main-c, primary), 0.3);
+    fill: rgba(color($main-c, primary), 0.3);
   }
 }
 
 .social-link__svg {
-  color: color($main-c, primary);
-  fill: color($main-c, primary);
+  color: color($base-c, white);
+  fill: color($base-c, white);
 }
