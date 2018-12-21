@@ -14,6 +14,9 @@
  * @property {string} SPRITE
  * @property {string} LAST_ATTR
  * @property {string} ENTRY
+ * @property {string} PAGE
+ * @property {string} GALLERY
+ * @property {string} WORDPRESS
  * @property {string} BUNDLE
  */
 const FileName = {
@@ -25,6 +28,9 @@ const FileName = {
   SPRITE: '_sprite.scss',
   LAST_ATTR: '_last-attr.scss',
   ENTRY: 'main.js',
+  PAGE: 'page.js',
+  GALLERY: 'gallery.js',
+  WORDPRESS: 'wordpress.js',
   BUNDLE: 'bundle.js'
 };
 

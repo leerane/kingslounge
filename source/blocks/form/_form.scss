@@ -1,0 +1,68 @@
+.form {
+  margin: 0;
+  padding: 0;
+}
+
+.form__inner {
+  margin: 0;
+  padding: 0;
+}
+
+.form__fields-wrapper {
+  margin: 0 0 rem(30) 0;
+  padding: 0;
+  display: block;
+
+  @media (min-width: breakpoint(tablet)) {
+    width: 50%;
+    margin: 0 auto rem(45) auto;
+  }
+
+  @media (min-width: breakpoint(desktop)) {
+    min-width: 500px;
+    margin: 0 auto rem(50) auto;
+  }
+}
+
+.form__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0 0 rem(20) 0;
+
+  @media (min-width: breakpoint(tablet)) {
+    margin: 0 auto rem(30) auto;
+  }
+
+  @media (min-width: breakpoint(desktop)) {
+    margin: 0 auto rem(40) auto;
+  }
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.form__button {
+  max-width: 100%;
+  width: 100%;
+
+  @media (min-width: breakpoint(tablet)) {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+.form__result-text {
+  margin: 0 auto 0.7em auto;
+  padding: 0;
+  text-align: center;
+
+  white-space: pre-line;
+
+  @include font-par(font-family(default), font-weight(bold), font-size(h2-m), normal, color($main-c, primary), font-lh(root));
+
+  @include fluid-type(font-size(h3-m), font-size(h3-d));
+}

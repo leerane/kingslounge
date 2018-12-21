@@ -1,3 +1,54 @@
 .main-content {
-  @include clear-list();
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: color($main-c, background);
+}
+
+.main-content__header {
+  padding: rem(60, 30, 0, 30);
+  margin: 0 auto;
+
+  @media (min-width: breakpoint(tablet)) {
+    padding: rem(60, 50, 0, 50);
+  }
+
+  @media (min-width: breakpoint(desktop)) {
+    padding: rem(70, 50, 0, 50);
+    max-width: 1150px;
+  }
+}
+
+.main-content__gallery {
+  background-color: color($main-c, background);
+  background-repeat: no-repeat;
+  background-size: 0;
+}
+
+.main-content__gallery-inner {
+  padding: rem(0, 30, 35, 30);
+
+  @media (min-width: breakpoint(tablet)) {
+    padding: rem(0, 50, 50, 50);
+  }
+
+  @media (min-width: breakpoint(desktop)) {
+    padding: rem(0, 50, 70, 50);
+  }
+}
+
+.main-content__title {
+  margin: 0 0 0.7em 0;
+  padding: 0;
+  width: 60%;
+
+  white-space: pre-line;
+
+  @include font-par(font-family(default), font-weight(bold), font-size(h2-m), normal, color($main-c, primary), font-lh(root));
+
+  @include fluid-type(font-size(h2-m), font-size(h2-d));
+
+  @media (min-width: breakpoint(desktop)) {
+    margin-bottom: rem(50);
+  }
 }

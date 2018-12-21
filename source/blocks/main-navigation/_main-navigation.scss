@@ -3,6 +3,19 @@
   padding: 0;
   width: 100%;
   display: block;
+
+  @media (min-width: breakpoint(tablet)) {
+    width: 70%;
+  }
+
+  @media (min-width: breakpoint(desktop)) {
+    width: 100%;
+  }
+}
+
+.main-navigation--active {
+  left: 50%;
+  transform: translate(-40%, -20%);
   z-index: z-index(navbar);
 }
 
@@ -16,7 +29,7 @@
   @media (min-width: breakpoint(tablet)) {
     flex-direction: row;
     margin: 0 auto;
-    padding: rem(0, 50);
+    padding: rem(0, 0, 0, 15);
   }
 
   @media (min-width: breakpoint(desktop)) {
@@ -43,6 +56,7 @@
   @include fluid-type(font-size(base-m), font-size(base-d));
 
   @media (min-width: breakpoint(tablet)) {
+    flex-wrap: wrap;
     flex-direction: row;
     flex-shrink: 1;
   }
@@ -58,13 +72,14 @@
   }
 
   @media (min-width: breakpoint(desktop)) {
+    min-width: 21%;
     padding: rem(30, 17);
   }
 }
 
-.main-navigation__item:nth-child(3) {
+.main-navigation__item:nth-child(4n+3) {
   @media (min-width: breakpoint(desktop)) {
-    margin-right: auto;
+    margin-left: auto;
   }
 }
 

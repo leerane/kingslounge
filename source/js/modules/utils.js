@@ -41,15 +41,15 @@ const makePlural = (number, options) => {
  * @return {boolean}
  */
 const checkParentNode = (parent, element) => {
-  let isEqual = false;
+  let isInside = false;
   while (element.parentNode) {
     if (element.parentNode === parent) {
-      isEqual = true;
+      isInside = true;
       break;
     }
     element = element.parentNode;
   }
-  return isEqual;
+  return isInside;
 };
 
 /**
@@ -77,10 +77,13 @@ const removeChildren = (parent, elements) => {
  *
  * @param {Event} evt
  * @param {addedCallback} callback
+ * @return {function()}
  */
 const escPressHandler = (evt, callback) => {
-  if (evt.keyCode === ESC_KEYCODE) {
-    callback();
+  return (...args) => {
+    if (evt.keyCode === ESC_KEYCODE) {
+      callback(...args);
+    }
   }
 };
 
@@ -95,11 +98,14 @@ const escPressHandler = (evt, callback) => {
  * @param {Event} evt
  * @param {Element} element
  * @param {addedCallback} callback
+ * @return {function()}
  */
 const outsideClickHandler = (evt, element, callback) => {
-  const target = evt.target;
-  if (target !== element && !checkParentNode(element, target)) {
-    callback();
+  return (...args) => {
+    const target = evt.target;
+    if (target !== element && !checkParentNode(element, target)) {
+      callback(...args);
+    }
   }
 };
 
@@ -112,14 +118,14 @@ const outsideClickHandler = (evt, element, callback) => {
  * @param {boolean} relative Относительно страницы (не экрана)
  * @return {Object}
  */
-const getCoords = (elem, relative) => {
+const getCoords = (elem, relative = true) => {
   const box = elem.getBoundingClientRect();
 
   const body = document.body;
   const docEl = document.documentElement;
 
-  const scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
-  const scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+  const scrollTop = pageYOffset || docEl.scrollTop || body.scrollTop;
+  const scrollLeft = pageXOffset || docEl.scrollLeft || body.scrollLeft;
 
   const clientTop = docEl.clientTop || body.clientTop || 0;
   const clientLeft = docEl.clientLeft || body.clientLeft || 0;
@@ -258,6 +264,32 @@ const render = (html) => {
   return template.content;
 };
 
+/**
+ * Функция скрытия скролла для элемента
+ *
+ * @param {string} str
+ */
+const changeOverflow = (str) => {
+  const element = document.querySelector(str);
+  const temp = element.style.overflow;
+  element.style.overflow = temp && temp !== 'visible'
+    ? 'visible'
+    : 'hidden';
+};
+
+/**
+ * Функция скрытия клика для элемента
+ *
+ * @param {string} str
+ */
+const changePointerEvents = (str) => {
+  const element = document.querySelector(str);
+  const temp = element.style.pointerEvents;
+  element.style.pointerEvents = temp && temp !== 'auto'
+    ? 'auto'
+    : 'none';
+};
+
 export {
   makePlural,
   removeChildren,
@@ -271,6 +303,8 @@ export {
   disableFormChildren,
   enableFormChildren,
   debounce,
-  render
+  render,
+  changeOverflow,
+  changePointerEvents
 };
 

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="description" content="Кальянная King's Lounge">
+    <meta name="keywords" content="кальянная, кальян, hookah, king, lounge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кальянная King's Lounge</title>
+
+    <!--- Preloading fonts and other stuff -->
+    <link rel="preload" href="fonts/mullerregular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/mullermedium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/mullerbold.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.min.css">
+
+    <!-- Yandex.Maps API -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=8bccf721-324d-4188-ad44-35dddcdbf6a3" type="text/javascript"></script>
+
+    <!-- Picturefill -->
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/libs/picturefill/picturefill.min.js" async></script>
+  </head>
+
+  <!-- Главная часть страницы -->
+  <body class="main-page">
+
+  <!-- Шапка сайта -->
+  <header class="main-header js-main-header">
+    <div class="main-header__inner">
+
+      <!-- Главный логотип сайта -->
+      <a class="main-logo main-header__logo" aria-label="Логотип King's Lounge">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/svg/logo--main.svg">
+          <source media="(min-width: 768px)" srcset="img/svg/logo--tablet.svg">
+          <img src="img/svg/logo--mobile.svg" alt="Логотип King's Lounge" class="main-logo__svg">
+        </picture>
+      </a>
+
+      <!-- Бургер -->
+      <button class="hamburger-button js-hamburger-button" type="button" aria-label="Hamburger button">
+        <span class="hamburger-button__icon"></span>
+      </button>
+
+      <!-- Главная навигация сайта -->
+      <nav class="main-navigation main-header__navigation js-dropdown-navigation visually-hidden">
+        <div class="main-navigation__inner">
+          <ul class="main-navigation__list">
+            <li class="main-navigation__item">
+              <a href="/" class="main-navigation__link main-navigation__link--icon">
+                <svg aria-label="Home" width="21" height="21" class="main-navigation__svg main-header__svg--home">
+                  <use xlink:href="img/svg/sprite.svg#home-icon"/>
+                </svg>Главная</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="/#advantages" class="main-navigation__link main-navigation__link--icon">
+                <svg aria-label="Menu" width="21" height="21" class="main-navigation__svg main-header__svg--home">
+                  <use xlink:href="img/svg/sprite.svg#advantages-icon"/>
+                </svg>Преимущества</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="/#menu" class="main-navigation__link main-navigation__link--icon">
+                <svg aria-label="Menu" width="21" height="21" class="main-navigation__svg main-header__svg--home">
+                  <use xlink:href="img/svg/sprite.svg#menu-icon"/>
+                </svg>Меню</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="/#gallery" class="main-navigation__link main-navigation__link--icon">
+                <svg aria-label="Gallery" width="21" height="21" class="main-navigation__svg main-header__svg--home">
+                  <use xlink:href="img/svg/sprite.svg#gallery-icon"/>
+                </svg>Галерея</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="/#contact" class="main-navigation__link main-navigation__link--icon">
+                <svg aria-label="Contact" width="21" height="21" class="main-navigation__svg main-header__svg--home">
+                  <use xlink:href="img/svg/sprite.svg#contact-icon"/>
+                </svg>Контакты</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="tel:+79585553355" class="main-navigation__link main-navigation__link--icon">
+                <svg aria-label="Phone" width="21" height="21" class="main-navigation__svg">
+                  <use xlink:href="img/svg/sprite.svg#call-icon"/>
+                </svg>+7 (958) 555-33-55</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Контент сайта -->
+  <main class="main-content">
+
+    <!-- Шапка страницы -->
+    <header class="main-content__header">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+          <a class="breadcrumbs__link" href="/" itemprop="url">Главная</a>
+        </li>
+        <li class="breadcrumbs__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+          <a class="breadcrumbs__link breadcrumbs__link--disabled" href="" itemprop="url">Галерея</a>
+        </li>
+      </ul>
+      <h1 class="main-content__title">Галерея фотографий</h1>
+    </header>
+
+      <!-- Галерея -->
+      <section class="gallery main-content__gallery" id="gallery" aria-labelledby="galleryTitle" aria-describedby="galleryInfo">
+        <div class="gallery__inner main-content__gallery-inner">
+          <h2 class="gallery__title visually-hidden" id="galleryTitle">Галерея</h2>
+          <p class="gallery__message">Ну тут у нас фотки, тест!</p>
+          <ul class="gallery__list" id="galleryInfo" aria-label="Фотографии">
+          </ul>
+          <a href="#" class="button button--primary button--s--wide gallery__button">Больше фото</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="main-footer">
+      <div class="main-footer__inner">
+        <a href="/" class="main-footer__logo" aria-label="Логотип King's Lounge">
+          <img src="img/svg/logo--tablet.svg" width="120" height="70" alt="Логотип King's Lounge" class="main-footer__logo-svg">
+        </a>
+        <ul class="social-list">
+          <li class="social-list__item">
+            <a href="#" class="social-link" aria-label="Instagram"><span class="visually-hidden">Instagram</span>
+              <svg aria-label="Instagram" width="36" height="36" class="social-link__svg">
+                <use xlink:href="img/svg/sprite.svg#instagram-icon"/>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="#" class="social-link" aria-label="VK"><span class="visually-hidden">VK</span>
+              <svg aria-label="VK" width="36" height="36" class="social-link__svg">
+                <use xlink:href="img/svg/sprite.svg#vk-icon"/>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="#" class="social-link" aria-label="Twitter"><span class="visually-hidden">Twitter</span>
+              <svg aria-label="Facebook" width="36" height="36" class="social-link__svg">
+                <use xlink:href="img/svg/sprite.svg#facebook-icon"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Скролл наверх -->
+    <a href="#" class="js-scroll-top main-page__js-scroll-top" aria-label="Scroll top">
+      <svg aria-label="Top" width="20" height="20" class="js-scroll-top__svg">
+        <use xlink:href="img/svg/sprite.svg#up-icon"/>
+      </svg>
+    </a>
+
+    <!-- SVG for Everybody -->
+    <script src="js/libs/svg4everybody/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+
+    <!-- Main script -->
+    <script src="js/gallery.bundle.js"></script>
+
+    <!-- Шаблон галереи -->
+    <template id="gallery-template">
+      <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <!-- Background of PhotoSwipe.
+             It's a separate element, as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+
+          <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+          <div class="pswp__container">
+            <!-- don't modify these 3 pswp__item elements, data is added later on -->
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+          </div>
+
+          <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+          <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+              <!--  Controls are self-explanatory. Order can be changed. -->
+
+              <div class="pswp__counter"></div>
+
+              <div class="pswp__preloader">
+                <div class="pswp__preloader__icn">
+                  <div class="pswp__preloader__cut">
+                    <div class="pswp__preloader__donut"></div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="pswp__button pswp__button--zoom" title="Zoom in/out">
+                <svg aria-label="Zoom in" tabindex="-1" width="21.51" height="21.265" class="pswp__icon-svg pswp__icon-svg--zoom-in">
+                  <use xlink:href="img/svg/sprite.svg#pswp-zoom-in-icon"/>
+                </svg>
+                <svg aria-label="Zoom in" tabindex="-1" width="21.51" height="21.265" class="pswp__icon-svg pswp__icon-svg--zoom-out">
+                  <use xlink:href="img/svg/sprite.svg#pswp-zoom-out-icon"/>
+                </svg>
+              </button>
+
+              <button class="pswp__button pswp__button--fs" title="Toggle fullscreen">
+                <svg aria-label="Expand" tabindex="-1" width="21.605" height="20.75" class="pswp__icon-svg pswp__icon-svg--expand">
+                  <use xlink:href="img/svg/sprite.svg#pswp-expand-icon"/>
+                </svg>
+                <svg aria-label="Minimize" tabindex="-1" width="21.605" height="20.75" class="pswp__icon-svg pswp__icon-svg--minimize">
+                  <use xlink:href="img/svg/sprite.svg#pswp-minimize-icon"/>
+                </svg>
+              </button>
+
+              <button class="pswp__button pswp__button--close" title="Close (Esc)">
+                <svg aria-label="Close" tabindex="-1" width="21.55" height="21.545" class="pswp__icon-svg">
+                  <use xlink:href="img/svg/sprite.svg#pswp-close-icon"/>
+                </svg>
+              </button>
+
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+              <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <div class="pswp__buttons">
+              <button class="pswp__button pswp__button--arrow--left" title="Previous">
+                <svg aria-label="Previous" width="60" height="60" class="pswp__icon-svg pswp__icon-svg--arrow">
+                  <use xlink:href="img/svg/sprite.svg#pswp-arrow-left-icon"/>
+                </svg>
+              </button>
+
+              <button class="pswp__button pswp__button--arrow--right" title="Next">
+                <svg aria-label="Next" width="60" height="60" class="pswp__icon-svg pswp__icon-svg--arrow">
+                  <use xlink:href="img/svg/sprite.svg#pswp-arrow-right-icon"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="pswp__caption">
+              <div class="pswp__caption__center"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </template>
+
+    <!-- Сообщение об ошибке-->
+    <template id="error">
+      <div class="modal-overlay visually-hidden" tabindex="-1" aria-hidden="true" role="dialog">
+        <div class="modal modal-overlay__modal" role="document">
+          <div class="modal__inner">
+            <h3 class="modal__title">Ошибка</h3>
+            <p class="modal__message">Данные не были загружены</p>
+            <button class="button button--primary button--s--wide modal__button" href="#">Закрыть</button>
+          </div>
+        </div>
+      </div>
+    </template>
+
+  </body>
+</html>

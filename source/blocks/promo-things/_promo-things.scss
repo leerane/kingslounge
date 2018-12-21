@@ -5,9 +5,16 @@
   background-color: color($main-c, background);
   background-image:
     linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.9) 100%),
-    url("../img/promo-cover.jpg");
+    url("../img/promo-img@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image:
+      linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.9) 100%),
+      url("../img/promo-img@2x.jpg");
+    background-size: cover;
+  }
 }
 
 .promo-things__inner {

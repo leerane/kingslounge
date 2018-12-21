@@ -1,19 +1,58 @@
 .modal-overlay {
   position: fixed;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  z-index: 999;
+  z-index: z-index(modal);
   width: 100%;
   height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: rgba(color($base-c, white), 0.9);
+  background-color: rgba(color($base-c, black), 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.35s ease, visibility 0.3s ease;
+  transition: opacity 0.35s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .modal-overlay--open {
   visibility: visible;
   opacity: 1;
+}
+
+.modal-overlay__modal {
+  display: block;
+  position: relative;
+  margin: auto;
+  max-width: 320px;
+  max-height: 336px;
+  transform: translate(0, -25%);
+  transition: transform 0.3s ease-in-out;
+
+  @media (min-width: breakpoint(tablet)) {
+    width: 566px;
+  }
+}
+
+.modal-overlay__modal {
+  display: block;
+  position: relative;
+  margin: auto;
+  max-width: 320px;
+  max-height: 336px;
+  transform: translate(0, -25%);
+  transition: transform 0.3s ease-in-out;
+
+  @media (min-width: breakpoint(tablet)) {
+    width: 566px;
+  }
+}
+
+.modal-overlay__modal--active {
+  transform: translate(0, 0);
 }

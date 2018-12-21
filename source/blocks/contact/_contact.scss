@@ -1,34 +1,145 @@
 .contact {
   position: relative;
   margin: 0;
-  padding: 0;
+  padding: rem(35, 0);
   background-color: color($main-c, background);
   background-image: url("../img/svg/note-pattern.svg");
   background-repeat: repeat;
   background-size: 100px;
+
+  @media (min-width: breakpoint(tablet)) {
+    padding: rem(50, 0);
+  }
+
+  @media (min-width: breakpoint(desktop)) {
+    padding: 0;
+  }
 }
 
 .contact__inner {
-  padding: rem(35, 30);
+  padding: 0;
   margin: 0 auto;
-
-  @media (min-width: breakpoint(tablet)) {
-    padding: rem(50, 50);
-  }
 
   @media (min-width: breakpoint(desktop)) {
     padding: rem(70, 50);
     max-width: 1150px;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
 .contact__title {
-  margin: 0 0 0.5em 0;
+  margin: 0 0 0.7em 0;
   padding: 0;
 
   white-space: pre-line;
 
-  @include font-par(font-family(default), font-weight(bold), font-size(h2-m), normal, color($main-c, primary), font-lh(root));
+  @include font-par(font-family(default), font-weight(bold), font-size(h2-m), normal, color($base-c, white), font-lh(root));
 
   @include fluid-type(font-size(h2-m), font-size(h2-d));
+
+  @media (min-width: breakpoint(desktop)) {
+    margin-bottom: rem(50);
+  }
+}
+
+.contact__list {
+  width: 100%;
+  display: block;
+  background-color: transparent;
+
+  @include clear-list();
+
+  margin-bottom: 40px;
+
+  @include font-par(font-family(default), font-weight(normal), font-size(base-m), normal, color($base-c, white), font-lh(root));
+
+  @include fluid-type(font-size(base-m), font-size(base-d));
+
+  @media (min-width: breakpoint(desktop)) {
+    margin: 0;
+    max-width: 400px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-shrink: 1;
+  }
+}
+
+.contact__item {
+  position: relative;
+  padding: rem(0, 0, 0, 30);
+  margin: rem(0, 0, 10, 0);
+  background-color: transparent;
+
+  @media (min-width: breakpoint(tablet)) {
+    margin: rem(0, 0, 15, 0);
+  }
+
+  @media (min-width: breakpoint(desktop)) {
+    margin: rem(0, 0, 20, 0);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: color($main-c, primary);
+  }
+}
+
+.contact__item:last-child {
+  @media (min-width: breakpoint(desktop)) {
+    margin: 0;
+  }
+}
+
+.contact__link {
+  position: relative;
+  margin: 0;
+  padding: 0;
+
+  @include font-par(font-family(default), font-weight(normal), font-size(base-m), normal, color($main-c, primary), font-lh(root));
+
+  @include fluid-type(font-size(base-m), font-size(base-d));
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 0;
+    background-color: color($main-c, primary);
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.contact__link:focus,
+.contact__link:hover {
+  &::before {
+    width: 100%;
+  }
+}
+
+.contact__info {
+  padding: rem(0, 30);
+  margin: 0;
+  display: block;
+
+  @media (min-width: breakpoint(tablet)) {
+    padding: rem(0, 50);
+  }
+
+  @media (min-width: breakpoint(desktop)) {
+    padding: 0;
+  }
 }
