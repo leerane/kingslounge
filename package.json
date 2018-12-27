@@ -105,7 +105,8 @@
     "zip": "cross-env NODE_ENV=production gulp zip",
     "gzip": "cross-env NODE_ENV=production gulp gzip",
     "deploy": "cross-env NODE_ENV=production npm run build && gh-pages -d build && gulp build:clean",
-    "wepback": "wepback -p"
+    "wepback": "wepback -p",
+    "gh-pages": "gh-pages -d build"
   },
   "browserslist": [
     "last 2 versions",

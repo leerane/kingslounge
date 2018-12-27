@@ -138,16 +138,22 @@
   display: block;
   transform: translate(-50%, -50%);
 
-  @media (min-width: breakpoint(tablet)) and (max-width: breakpoint(tablet-top)) {
+  @media (min-width: breakpoint(tablet)) {
     flex-shrink: 0;
     position: static;
     top: 0;
     left: 0;
     padding: 0;
     transform: translate(0, 0);
+
   }
 
   @media (min-width: breakpoint(desktop)) {
+    position: absolute;
+    left: 50%;
+    z-index: z-index(hamburger);
+    display: block;
     top: 115px;
+    transform: translate(-50%, -50%);
   }
 }
