@@ -3228,7 +3228,7 @@ a.pswp__share--download:hover {
           transform: translate(-50%, -50%);
 }
 
-@media (min-width: 768px) and (max-width: 1149px) {
+@media (min-width: 768px) {
   .main-header__logo {
     -ms-flex-negative: 0;
         flex-shrink: 0;
@@ -3243,7 +3243,13 @@ a.pswp__share--download:hover {
 
 @media (min-width: 1150px) {
   .main-header__logo {
+    position: absolute;
+    left: 50%;
+    z-index: 30;
+    display: block;
     top: 115px;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 
