@@ -5,7 +5,7 @@
 import './animations';
 
 /**
- * Функция состояния завершенности анимации
+ * Функция "отрисовки" анимации
  *
  * @callback draw
  * @param {number} progress
@@ -13,6 +13,13 @@ import './animations';
 
 /**
  * Временная функция
+ *
+ * @callback timing
+ * @param {number} timeFraction
+ */
+
+/**
+ * Функция
  *
  * @callback timing
  * @param {number} timeFraction
